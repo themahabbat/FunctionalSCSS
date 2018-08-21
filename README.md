@@ -1,0 +1,2 @@
+# FunctionalSCSS
+Functional SCSS boilerplate
