@@ -1,0 +1,35 @@
+$list: ('top', 'left', 'right', 'bottom');
+$max: 50;
+
+@for $i from 0 through $max {
+   .radius-#{$i} {
+      border-radius: #{$i}px !important;
+   }
+
+   .margin-#{$i} {
+      margin: #{$i}px !important;
+   }
+
+   @each $position in $list {
+      .margin-#{$position}-#{$i} {
+         margin-#{$position}: #{$i}px !important; 
+      }
+   }
+
+   @each $position in $list {
+      .padding-#{$position}-#{$i} {
+         padding-#{$position}: #{$i}px !important; 
+      }
+   }
+
+   .padding-#{$i} {
+      padding: #{$i}px !important;
+   }
+}
+
+@for $i from 1 through 6 {
+   h#{$i} {
+      margin: 0 !important;
+      padding: 0 !important;
+   }
+}
